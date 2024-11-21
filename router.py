@@ -5,7 +5,7 @@ import requests
 router = APIRouter(prefix='/coins', tags=['coins'])
 
 
-@router.get('/{coin_name}')
+@router.get('/coin')
 async def get_coin(request: Request, coin: str):
 	url = "https://api.coingecko.com/api/v3/simple/price"
 	params = {
